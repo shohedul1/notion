@@ -40,7 +40,7 @@ const ActionButtton = () => {
                         </div>
                         <div>
                             <Button
-                                className="hidden lg:flex items-center border-none text-md">Get Shohidul free</Button>
+                                className="hidden lg:flex items-center border-none text-md">Get Notion free</Button>
                         </div>
 
 
