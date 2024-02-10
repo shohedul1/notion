@@ -51,7 +51,7 @@ const tabs = [
         userText: (
             <div className="md:mt-6">
                 <span className="text-sky-500">@DebMecca</span>
-                I used to HATE documenting things. And then I started using @NotionHQ and I document a lot. A LOT A LOT. Now I just realize that it wasn't that I hated documenting, I just hated Google Docs.
+                I used to HATE documenting things. And then I started using @NotionHQ and I document a lot. A LOT A LOT. Now I just realize that it wasn&apos;t that I hated documenting, I just hated Google Docs.
             </div>
         )
     },
@@ -62,7 +62,7 @@ const tabs = [
         userText: (
             <div className="md:mt-6">
                 <span className="text-sky-500">@mindofandre</span>
-                One of the most incredible things about @NotionHQ is the dynamic community being built - creating and sharing at its best.
+                One of the most incredible things about @NotionHQ is the dynamic community being built creating and sharing at its best.
 
             </div>
         )
