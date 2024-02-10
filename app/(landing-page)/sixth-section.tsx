@@ -45,7 +45,7 @@ const tabs = [
         ],
     },
     {
-        profile: "/image/logo1.avif",
+        profile: "/image/logo1.png",
         userName: 'Deborah Mecca',
         userHandle: '@Deborah Mecca',
         userText: (
