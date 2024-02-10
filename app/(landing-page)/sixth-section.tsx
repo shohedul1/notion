@@ -57,7 +57,7 @@ const tabs = [
     },
     {
         profile: "/image/logo2.png",
-        userName: 'André Blackman',
+        userName: 'Andre Blackman',
         userHandle: '@André Blackman',
         userText: (
             <div className="md:mt-6">
