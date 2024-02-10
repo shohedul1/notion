@@ -27,7 +27,7 @@ const tabs = [
         Learn more <PiArrowRight className="text-sm ml-1" />
       </div>
     ),
-    image: '/assets/images3.jpg',
+    image: '/assets/AI.jpg',
   },
   {
     icon: (<PiFileThin className="text-3xl mr-2 text-red-600 bg-red-100 p-1 rounded" />),
@@ -38,7 +38,7 @@ const tabs = [
         Learn more <PiArrowRight className="text-sm ml-1" />
       </div>
     ),
-    image: '/assets/images1.jpg',
+    image: '/assets/Docs.jpg',
   },
   {
     icon: (<PiSparkleLight className="text-3xl mr-2 text-blue-600 bg-blue-100 p-1 rounded" />),
@@ -49,7 +49,7 @@ const tabs = [
         Learn more <PiArrowRight className="text-sm ml-1" />
       </div>
     ),
-    image: '/assets/images5.jpg',
+    image: '/assets/Wikis.png',
   },
   {
     icon: (<LiaRProject className="text-3xl mr-2 text-yellow-600 bg-yellow-100 p-1 rounded" />),
@@ -60,7 +60,7 @@ const tabs = [
         Learn more <PiArrowRight className="text-sm ml-1" />
       </div>
     ),
-    image: '/assets/images2.jpg',
+    image: '/assets/project.png',
   },
   {
     icon: (<FaCalendarAlt className="text-3xl mr-2 text-green-600 bg-green-100 p-1 rounded" />),
@@ -71,7 +71,7 @@ const tabs = [
         Learn more <PiArrowRight className="text-sm ml-1" />
       </div>
     ),
-    image: '/assets/images4.jpg',
+    image: '/assets/Calendar.jpg',
   }
 ]
 
@@ -145,11 +145,11 @@ const HeroSection = () => {
             {activeTab && (
               <div className="flex justify-center items-center flex-col">
                 <Image src={activeTab.image}
-               alt={activeTab.name}
-               width={1000}
-               height={1000}
-               className="w-full border p-20 xl:p-40 rounded-xl"
-               />
+                  alt={activeTab.name}
+                  width={1000}
+                  height={1000}
+                  className="w-full border p-20 xl:p-40 rounded-xl"
+                />
 
               </div>
             )}
@@ -158,14 +158,13 @@ const HeroSection = () => {
         </div>
       ) : (
         <div className="flex xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
-           {tabs.map((tab)=>(
+          {tabs.map((tab) => (
             <motion.div
-            key={tab.name}
-            className={`flex justify-center space-x-4 xl:pt-4 sm:my-10 xl:py-0 w-60 h-36 ${
-              activeTab === tab ? "border rounded-xl pt-2 bg-white " : 
-              "shadow-md rounded-xl pt-2 bg-[#f6f5f4] "
-            }`}
-            onMouseEnter={()=> setActioveTab(tab)}
+              key={tab.name}
+              className={`flex justify-center space-x-4 xl:pt-4 sm:my-10 xl:py-0 w-60 h-36 ${activeTab === tab ? "border rounded-xl pt-2 bg-white " :
+                "shadow-md rounded-xl pt-2 bg-[#f6f5f4] "
+                }`}
+              onMouseEnter={() => setActioveTab(tab)}
             >
               <div className="px-4">
                 <div className="flex items-center">
@@ -180,29 +179,47 @@ const HeroSection = () => {
                 </div>
 
                 <motion.div className="flex flex-col text-sm"
-                initial={{y:0}}
-                animate={{y:activeTab === tab ? 10 : 25}}
-                transition={{duration: 0.2}}
+                  initial={{ y: 0 }}
+                  animate={{ y: activeTab === tab ? 10 : 25 }}
+                  transition={{ duration: 0.2 }}
                 >
                   <div>
-                    <motion.div initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} transition={{duration: 0.3}}>
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
                       {tab.description}
                     </motion.div>
                   </div>
 
                   {/* conditionsl rendering for the Learn more */}
+
                   {activeTab === tab && (
-                    <div className="text-sm ">
+                    <div className="text-sm">
                       {tab.mone}
                     </div>
+
                   )}
+
 
                 </motion.div>
               </div>
             </motion.div>
-           ))}
-      </div>
+          ))}
+        </div>
       )}
+
+      {/* display content based on the action tab on kedium size screens and bigger */}
+      <div className="hidden md:flex py-10 px-8 md:px-0 lg:w-3/4 2xl:w-[55%]">
+        {activeTab && (
+          <Image src={activeTab.image}
+            alt={activeTab.name}
+            width={500}
+            height={500}
+            className="w-full p-20 xl:p-40 rounded-xl bg-[#f6f5f4]"
+          />
+
+        )}
+
+
+      </div>
 
     </div>
   )
