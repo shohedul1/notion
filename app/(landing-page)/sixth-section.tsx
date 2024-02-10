@@ -61,7 +61,7 @@ const tabs = [
         userHandle: '@André Blackman',
         userText: (
             <div className="md:mt-6">
-                <span className="text-sky-500">@@mindofandre</span>
+                <span className="text-sky-500">@mindofandre</span>
                 One of the most incredible things about @NotionHQ is the dynamic community being built - creating and sharing at its best.
 
             </div>
