@@ -176,14 +176,15 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <div className="space-y-4 flex flex-col px-4 mt-4">
 
           <Button variant={'outline'} className="w-full">
-            {/* <SignedIn>
-              <UserButton afterSignOutUrl="/" />
-            </SignedIn>
             <SignedOut>
               <Link href={'/sign-in'} style={{ textDecoration: 'none' }}>
                 sing in
               </Link>
-            </SignedOut> */}
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+
           </Button>
         </div>
 
