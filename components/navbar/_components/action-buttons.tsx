@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { X, AlignJustify } from "lucide-react";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 
 
@@ -22,6 +23,8 @@ const ActionButtton = () => {
 
 
     return (
+
+
         <div className="pr-2">
             <div className="items-center justify-center flex">
                 <div className="flex xl:space-x-4">
@@ -33,11 +36,23 @@ const ActionButtton = () => {
                         |
                     </div>
 
+
                     <div className="flex lg:space-x-4 items-center pr-4">
                         <div>
-                            <Button variant={"outline"}
-                                className="hidden lg:flex items-center border-none text-md">Log in</Button>
+                            <Button variant={"outline"} className="hidden lg:flex items-center border-none text-md">
+
+                            <SignedIn>
+                                    <UserButton afterSignOutUrl="/" />
+                                </SignedIn>
+                                <SignedOut>
+                                    <Link href={'/sign-in'} style={{ textDecoration: 'none' }}>
+                                        sing in
+                                    </Link>
+                                </SignedOut>
+                            </Button>
                         </div>
+
+
                         <div>
                             <Button
                                 className="hidden lg:flex items-center border-none text-md">Get Notion free</Button>
@@ -63,7 +78,8 @@ const ActionButtton = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 
-export default ActionButtton
+export default ActionButtton;

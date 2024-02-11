@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 import { BarChart, Code, DollarSign, Headphones, PaintBucket, Settings, UserPlus } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 
 interface DropDownMenuProps {
@@ -173,8 +174,16 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           </Button>
         </div>
         <div className="space-y-4 flex flex-col px-4 mt-4">
+
           <Button variant={'outline'} className="w-full">
-             Log in
+            {/* <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+            <SignedOut>
+              <Link href={'/sign-in'} style={{ textDecoration: 'none' }}>
+                sing in
+              </Link>
+            </SignedOut> */}
           </Button>
         </div>
 
